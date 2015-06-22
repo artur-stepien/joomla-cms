@@ -1374,7 +1374,7 @@ abstract class JDatabaseDriver extends JDatabase implements JDatabaseInterface
 	 * NOTE: Choosing to key the result array by a non-unique field can result in unwanted
 	 * behavior and should be avoided.
 	 *
-	 * @param   string  $key  The name of a field on which to key the result array.
+	 * @param   string  $key  The index of a field on which to key the result array.
 	 *
 	 * @return  mixed   The return value or null if the query failed.
 	 *
