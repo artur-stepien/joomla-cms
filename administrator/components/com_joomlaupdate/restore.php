@@ -1554,15 +1554,15 @@ class AKPostprocDirect extends AKAbstractPostproc
 		return $filename;
 	}
 
-	public function createDirRecursive($dirName, $perms)
+	public function createDirRecursive($dirName, $perms = 0755)
 	{
 		if (AKFactory::get('kickstart.setup.dryrun', '0'))
 		{
 			return true;
 		}
-		if (file_exists($dirName) or mkdir($dirName, 0755, true))
+		if (file_exists($dirName) or mkdir($dirName, $perms, true))
 		{
-			@chmod($dirName, 0755);
+			@chmod($dirName, $perms);
 
 			return true;
 		}
