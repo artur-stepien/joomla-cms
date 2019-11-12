@@ -1560,7 +1560,7 @@ class AKPostprocDirect extends AKAbstractPostproc
 		{
 			return true;
 		}
-		if (@mkdir($dirName, 0755, true))
+		if (file_exists($dirName) or mkdir($dirName, 0755, true))
 		{
 			@chmod($dirName, 0755);
 
