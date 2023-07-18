@@ -148,7 +148,7 @@ class FieldTable extends Table
         // Verify that the name is unique
         $table = new static($this->_db);
 
-        if ($table->load(['name' => $this->name]) && ($table->id != $this->id || $this->id == 0)) {
+        if ($table->load(['name' => $this->name,'context'=>$this->context]) && ($table->id != $this->id || $this->id == 0)) {
             $this->setError(Text::_('COM_FIELDS_ERROR_UNIQUE_NAME'));
 
             return false;
