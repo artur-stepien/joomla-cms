@@ -91,6 +91,13 @@ interface CMSApplicationInterface extends ExtensionManagerInterface, Configurati
      * @since  4.0.0
      */
     public const MSG_DEBUG = 'debug';
+    
+    /**
+     * Constant defining an enqueued success message
+     * @var    string
+     * @since  __DEPLOY_VERSION__
+     */
+    public const MSG_SUCCESS = 'success';
 
     /**
      * Enqueue a system message.
