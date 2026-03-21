@@ -11,7 +11,6 @@
 namespace Joomla\Plugin\ApiAuthentication\Token\Extension;
 
 use Joomla\CMS\Authentication\Authentication;
-use Joomla\CMS\Crypt\Crypt;
 use Joomla\CMS\Event\User\AuthenticationEvent;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\User\UserFactoryAwareTrait;
