@@ -10,7 +10,6 @@
 namespace Joomla\CMS\Authentication\Password;
 
 use Joomla\Authentication\Password\HandlerInterface;
-use Joomla\CMS\Crypt\Crypt;
 use Joomla\CMS\User\UserHelper;
 
 // phpcs:disable PSR1.Files.SideEffects
