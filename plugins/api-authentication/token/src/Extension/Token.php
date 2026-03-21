@@ -207,7 +207,7 @@ final class Token extends CMSPlugin implements SubscriberInterface
         $enabled = $this->isTokenEnabledForUser($userId);
 
         // Do the tokens match? Use a timing safe string comparison to prevent timing attacks.
-        $hashesMatch = Crypt::timingSafeCompare($referenceHMAC, $tokenHMAC);
+        $hashesMatch = hash_equals($referenceHMAC, $tokenHMAC);
 
         // Is the user in the allowed user groups?
         $inAllowedUserGroups = $this->isInAllowedUserGroup($userId);
