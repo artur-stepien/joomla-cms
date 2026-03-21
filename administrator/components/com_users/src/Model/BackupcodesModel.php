@@ -10,7 +10,6 @@
 
 namespace Joomla\Component\Users\Administrator\Model;
 
-use Joomla\CMS\Crypt\Crypt;
 use Joomla\CMS\Date\Date;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\MVC\Model\BaseDatabaseModel;
