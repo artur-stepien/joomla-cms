@@ -55,7 +55,7 @@ final class Version
      * @var    integer
      * @since  3.8.0
      */
-    public const PATCH_VERSION = 1;
+    public const PATCH_VERSION = 0;
 
     /**
      * Extra release version info.
@@ -82,7 +82,7 @@ final class Version
      * @var    string
      * @since  3.5
      */
-    public const CODENAME = 'Nyota';
+    public const CODENAME = 'TBD';
 
     /**
      * Release date.
