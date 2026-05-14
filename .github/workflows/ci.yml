@@ -400,7 +400,7 @@ jobs:
             installation/template/images
             installation/template/js
             installation/template/scss
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json', 'build/media_source/**', 'administrator/components/com_media/resources/**') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json', 'build/build.mjs', 'build/build-modules-js/**', 'media_source/**') }}
       - uses: actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: |
