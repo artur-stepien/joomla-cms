@@ -2,11 +2,11 @@ describe('Install Joomla', () => {
   it('blocks admin password with less than 12 characters', () => {
     cy.task('deleteRelativePath', 'configuration.php');
     cy.visit('/installation/index.php');
-    cy.get('#jform_site_name').clear().type(cy.env('sitename'));
+    cy.get('#jform_site_name').clear().type(Cypress.expose('sitename'));
     cy.get('#step1').click();
-    cy.get('#jform_admin_user').clear().type(cy.env('name'));
-    cy.get('#jform_admin_username').clear().type(cy.env('username'));
-    cy.get('#jform_admin_email').clear().type(cy.env('email'));
+    cy.get('#jform_admin_user').clear().type(Cypress.expose('name'));
+    cy.get('#jform_admin_username').clear().type(Cypress.expose('username'));
+    cy.get('#jform_admin_email').clear().type(Cypress.expose('email'));
     cy.get('#jform_admin_password').clear().type('Short1!');
     cy.get('#jform_admin_password').blur();
 
@@ -20,11 +20,11 @@ describe('Install Joomla', () => {
   it('allows admin password with 12 or more characters', () => {
     cy.task('deleteRelativePath', 'configuration.php');
     cy.visit('/installation/index.php');
-    cy.get('#jform_site_name').clear().type(cy.env('sitename'));
+    cy.get('#jform_site_name').clear().type(Cypress.expose('sitename'));
     cy.get('#step1').click();
-    cy.get('#jform_admin_user').clear().type(cy.env('name'));
-    cy.get('#jform_admin_username').clear().type(cy.env('username'));
-    cy.get('#jform_admin_email').clear().type(cy.env('email'));
+    cy.get('#jform_admin_user').clear().type(Cypress.expose('name'));
+    cy.get('#jform_admin_username').clear().type(Cypress.expose('username'));
+    cy.get('#jform_admin_email').clear().type(Cypress.expose('email'));
     cy.get('#jform_admin_password').clear().type('ValidPass123!');
     cy.get('#jform_admin_password').blur();
 
@@ -38,11 +38,11 @@ describe('Install Joomla', () => {
   it('blocks admin password with spaces at the beginning', () => {
     cy.task('deleteRelativePath', 'configuration.php');
     cy.visit('/installation/index.php');
-    cy.get('#jform_site_name').clear().type(cy.env('sitename'));
+    cy.get('#jform_site_name').clear().type(Cypress.expose('sitename'));
     cy.get('#step1').click();
-    cy.get('#jform_admin_user').clear().type(cy.env('name'));
-    cy.get('#jform_admin_username').clear().type(cy.env('username'));
-    cy.get('#jform_admin_email').clear().type(cy.env('email'));
+    cy.get('#jform_admin_user').clear().type(Cypress.expose('name'));
+    cy.get('#jform_admin_username').clear().type(Cypress.expose('username'));
+    cy.get('#jform_admin_email').clear().type(Cypress.expose('email'));
     cy.get('#jform_admin_password').clear().type(' ValidPass123!');
     cy.get('#jform_admin_password').blur();
 
@@ -56,11 +56,11 @@ describe('Install Joomla', () => {
   it('blocks admin password with spaces at the end', () => {
     cy.task('deleteRelativePath', 'configuration.php');
     cy.visit('/installation/index.php');
-    cy.get('#jform_site_name').clear().type(cy.env('sitename'));
+    cy.get('#jform_site_name').clear().type(Cypress.expose('sitename'));
     cy.get('#step1').click();
-    cy.get('#jform_admin_user').clear().type(cy.env('name'));
-    cy.get('#jform_admin_username').clear().type(cy.env('username'));
-    cy.get('#jform_admin_email').clear().type(cy.env('email'));
+    cy.get('#jform_admin_user').clear().type(Cypress.expose('name'));
+    cy.get('#jform_admin_username').clear().type(Cypress.expose('username'));
+    cy.get('#jform_admin_email').clear().type(Cypress.expose('email'));
     cy.get('#jform_admin_password').clear().type('ValidPass123! ');
     cy.get('#jform_admin_password').blur();
 
@@ -74,11 +74,11 @@ describe('Install Joomla', () => {
   it('allows spaces in the middle of admin_password', () => {
     cy.task('deleteRelativePath', 'configuration.php');
     cy.visit('/installation/index.php');
-    cy.get('#jform_site_name').clear().type(cy.env('sitename'));
+    cy.get('#jform_site_name').clear().type(Cypress.expose('sitename'));
     cy.get('#step1').click();
-    cy.get('#jform_admin_user').clear().type(cy.env('name'));
-    cy.get('#jform_admin_username').clear().type(cy.env('username'));
-    cy.get('#jform_admin_email').clear().type(cy.env('email'));
+    cy.get('#jform_admin_user').clear().type(Cypress.expose('name'));
+    cy.get('#jform_admin_username').clear().type(Cypress.expose('username'));
+    cy.get('#jform_admin_email').clear().type(Cypress.expose('email'));
     cy.get('#jform_admin_password').clear().type('Valid Pass 123!');
     cy.get('#jform_admin_password').blur();
 
